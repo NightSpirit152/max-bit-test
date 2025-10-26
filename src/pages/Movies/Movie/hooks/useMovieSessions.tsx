@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { apiGet } from "../../../../api";
 import type { TCinema, TSession } from "../../../../api/types.ts";
 import { notification } from "antd";
-import { groupMovieSessions } from "../components/Movie/utils/groupMovieSessions.ts";
+import { groupMovieSessions } from "../utils/groupMovieSessions.ts";
 
 export const useMovieSessions = ({ id }: { id?: string | null }) => {
   const [sessions, setSessions] = useState<TSession[]>([]);

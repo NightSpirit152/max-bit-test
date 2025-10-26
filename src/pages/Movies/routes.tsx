@@ -1,24 +1,15 @@
 import type { TAppRoute } from "../../complex/AppRouter/types";
 import { Suspense } from "../../complex/AppRouter/components/Suspense.tsx";
 import Movies from "./index.tsx";
-import { Movie } from "./_files/components/Movie/Movie.tsx";
+import { MOVIE_INFO_ROUTES } from "./Movie/routes.tsx";
 
 export const MOVIES_ROUTES: TAppRoute = {
   url: "/movies",
   title: "Фильмы",
+  children: [MOVIE_INFO_ROUTES],
   component: (
     <Suspense>
       <Movies />
-    </Suspense>
-  ),
-};
-
-export const MOVIE_INFO_ROUTES: TAppRoute = {
-  url: `${MOVIES_ROUTES.url}/movie`,
-  title: "Фильм",
-  component: (
-    <Suspense>
-      <Movie />
     </Suspense>
   ),
 };

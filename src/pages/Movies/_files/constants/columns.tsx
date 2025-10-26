@@ -12,6 +12,7 @@ export const getMoviesColumns = ({
     title: "",
     dataIndex: "posterImage",
     key: "posterImage",
+    align: "center",
     render: (value) => <Image src={getPosterPath(value)} />,
   },
   {
@@ -35,6 +36,7 @@ export const getMoviesColumns = ({
     title: "",
     dataIndex: "id",
     key: "showMovie",
+    align: "center",
     render: (value, data) => (
       <Button type="primary" onClick={() => openMovieInfo(value, data)}>
         Посмотреть сеансы

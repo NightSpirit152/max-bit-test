@@ -1,4 +1,4 @@
-export const getPosterPath = (path: string) => {
+export const getPosterPath = (path?: string) => {
   const apiUrl = import.meta.env.VITE_API_URL;
 
   return `${apiUrl}${path}`;
